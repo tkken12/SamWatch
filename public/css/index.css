@@ -1,0 +1,65 @@
+#sam-container {
+    position: absolute;
+    top:0%;
+    left: 0%;
+    border: 1px solid red;
+}
+#watchImageContainer {
+    width: 976px;
+    border: 1px solid #bcbcbc;
+    padding-left: 232px;
+    padding-right: 232px;
+    margin-bottom: 13px auto;
+}
+
+#space{
+    border: 1px black solid ;
+    padding-top:37px;
+    
+}
+
+#drop, #drop-sub{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+
+#drop > li >a {
+    text-align: right;
+}
+
+#drop-sub {
+    background-color: #333333;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    font-size: 12pt;
+    padding-left: 105px;
+    position: fixed;
+    right: 345px;
+    top: 61px;
+ 
+}
+#drop-sub > li{
+    margin:37px;
+}
+
+
+
+#drop > li:hover #drop-sub{
+    opacity: 1;
+    visibility: visible;
+}
+#drop > li:hover #drop > a{
+    background-color: #333333;
+    padding:210px;
+}
+
+#select{
+    position: fixed; 
+    top: 24px; 
+    right: 361px;
+    border: red 1px solid;
+    
+}
