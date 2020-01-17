@@ -6,8 +6,9 @@ const app = express()
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
-//const static = require('serve-static')
+const flash = require('connect-flash')
 const path = require('path')
+
 
 //DB set
 const dbURL = 'mongodb://localhost:27017/samtree'
@@ -33,6 +34,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({secret:'MySecret', resave:true, saveUninitialized:true})); //session hash 화
 
+//flash
+app.use(flash())
+
 //passport
 app.use(passport.initialize())
 app.use(passport.session())
@@ -45,6 +49,7 @@ app.use(bodyParser.json())
 //route
 app.use('/', require('./routes/home'))
 app.use('/admin',require('./routes/admin'))
+app.use('/upload', require('./routes/upload'))
 
 //error handler 
 app.use((req,res,next)=>{

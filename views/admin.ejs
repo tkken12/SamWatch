@@ -4,10 +4,12 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <form method="POST" action="loginCheck.php">
-        <label>ID : <input type="text" name = "loginID" /></label>
-        <label>PW : <input type="password" name="loginPW" /></label>
-        <input type ="submit"/>
+    
+    <form method="POST" action="admin">
+        <label>ID : <input type="text" name = "adminName" placeholder="adminName"/></label>
+        <label>PW : <input type="password" name="password" placeholder="PassWord"/></label>
+        <button type ="submit">Log in</button>
+        <span><input type="button" onclick="location.href='/admin/create'" value="Admin SignUp"></span>
     </form>
     
 </body>

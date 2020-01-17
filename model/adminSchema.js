@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const bcrypt = require('bcrypt-nodejs')
+//const bcrypt = require('bcrypt-nodejs')
 
 var adminSchema = mongoose.Schema({
     adminName:{
@@ -16,3 +16,6 @@ var adminSchema = mongoose.Schema({
     }
     
 })
+
+
+module.exports = mongoose.model('adminAccount',adminSchema)

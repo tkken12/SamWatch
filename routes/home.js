@@ -6,6 +6,7 @@ const fs = require('fs')
 //home
 router.get('/', (req,res)=>{
     res.render('index')
+    
 })
 
 
